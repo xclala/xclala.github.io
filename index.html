@@ -2,9 +2,12 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>旋转太极图</title>
-    <style type="text/css">
+    <meta charset='UTF-8'>
+    <title>邢栋的个人网页</title>
+</head>
+
+<body>
+    <style>
         html {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
@@ -12,83 +15,23 @@
         }
 
         body {
-            background-color: gray;
+            background-color: #d0e4fe;
+        }
+
+        h1 {
+            color: orangered;
+            text-align: center;
         }
     </style>
-</head>
-
-<body>
-    <canvas id="myCanvas" width="600" height="400">
-        <script type="text/javascript">
-            function runTaiji(s) {
-                // 可以根据自己的想要的速度传参,s越大速度越快
-                let v = s / 36000;
-                let i = 1;
-
-                function fillTaiji() {
-                    var c = document.getElementById("myCanvas");
-                    var ctx = c.getContext("2d");
-                    ctx.clearRect(0, 0, 600, 400);
-                    // 此处保存原始坐标
-                    ctx.save();
-                    ctx.translate(300, 200);
-                    // var time = new Date();
-                    // ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() )
-                    ctx.rotate(((2 * Math.PI) * v) * i++);
-                    if (i === 36000) {
-                        i = 1;
-                    }
-                    //绘制左侧的白色半圆直径都是150
-                    ctx.fillStyle = "#FFFFFF";
-                    ctx.beginPath();
-                    ctx.arc(0, 0, 150, 1.5 * Math.PI, Math.PI / 2, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制右侧的黑色半圆
-                    ctx.fillStyle = "#000000";
-                    ctx.beginPath();
-                    ctx.arc(0, 0, 150, Math.PI / 2, 1.5 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制下面的黑色圆
-                    ctx.fillStyle = "#000000";
-                    ctx.beginPath();
-                    ctx.arc(0, 75, 75, 0, 2 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制上面的白色圆
-                    ctx.fillStyle = "#FFFFFF";
-                    ctx.beginPath();
-                    ctx.arc(0, -75, 75, 0, 2 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制两个小圆
-                    ctx.fillStyle = "FFFFFF";
-                    ctx.beginPath();
-                    ctx.arc(0, 75, 10, 0, 2 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制黑色小圆
-                    ctx.fillStyle = "#000";
-                    ctx.beginPath();
-                    ctx.arc(0, -75, 10, 0, 2 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-
-                    ctx.closePath();
-                    ctx.restore();
-                    // 此处恢复原始坐标
-                    window.requestAnimationFrame(fillTaiji)
-                    // window.requestAnimationFrame() 
-                    // 告诉浏览器——你希望执行一个动画，
-                    // 并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。
-                    // 该方法需要传入一个回调函数作为参数，
-                    // 该回调函数会在浏览器下一次重绘之前执行
-                }
-                window.requestAnimationFrame(fillTaiji)
-            }
-            runTaiji(200);
-        </script>
+    <h1>邢栋的个人网页</h1>
+    <strong>自我介绍：</strong>
+    <p>大家好，我是邢栋！我喜欢编程，所以编了一些网页，下面是我认为比较好的作品的链接：<br></p>
+    <a href="https://xclala.github.io/jiuzhaigou/">九寨沟<br></a>
+    <a href="https://xclala.github.io/CommonConstant/">常见常数<br></a>
+    <a href="https://xclala.github.io/CommonSquareNumber/">常见数的平方<br></a>
+    <a href="https://xclala.github.io/MultiplicationTable/">九九乘法表</a>
+    <a href="https://xclala.github.io/taichi/">旋转太极</a>
 </body>
-
+<p>下面是自由编辑区。</p>
+<div contenteditable="true"><strong>在这里编辑！！！</strong></div>
 </html>
