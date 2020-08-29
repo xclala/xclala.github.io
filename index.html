@@ -34,11 +34,8 @@
     </style>
     <h1>邢栋的个人网页</h1>
     <script>
-        function browser() {
-            window.alert("使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！")
-        }
+        window.alert("使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！")
     </script>
-    <button type="button" onclick="browser()">推荐浏览器</button>
     <strong><br>自我介绍：</strong>
     <p>大家好，我是邢栋！我喜欢编程，所以编了一些网页，下面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
     <p>⬇播放音乐</p>
@@ -109,18 +106,20 @@
         function message() {
             document.write(
                 '在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见的话，欢迎向我反馈，我会尽力实现的😊。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
-                )
+            )
         }
 
         function git_and_github() {
             document.write(
                 '你可以注册一个github号和安装git,<a href="https://github.com/xclala/home_page">我的github地址</a>,<br>和几个关联仓库的地址：https://github.com/xclala/javascript_clock,\nhttps://github.com/xclala/CommonConstant,\nhttps://github.com/xclala/jiuzhaigou,\nhttps://github.com/xclala/taichi,\nhttps://github.com/xclala/MultiplicationTable,\nhttps://github.com/xclala/CommonSquareNumber。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
-                )
+            )
         }
     </script>
     <button type="button" onclick="message()">提示</button>
     <p></p>
     <button type="button" onclick="git_and_github()">git与github</button>
+    <p></p>
+    <small>本网页是邢栋的个人网页官网，请注意甄别。</small>
     <p>下面是自由编辑区。</p>
     <div contenteditable="true"><strong>在这里编辑！！！</strong></div>
 </body>
