@@ -31,6 +31,42 @@
         strong:hover {
             color: yellowgreen;
         }
+
+        #menu {
+            display: inline-block;
+        }
+
+        #menu #list {
+            max-height: 0;
+            transition: max-height 0.25s ease-out;
+            overflow: hidden;
+            background: #f5f4f4;
+            width: 80px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #menu:hover #list {
+            max-height: 200px;
+            transition: max-height 0.25s ease-in;
+            width: 80px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            height: 32px;
+            width: 80px;
+            margin-top: 6px;
+            border-radius: 4px;
+            color: #fff;
+            padding-left: 0;
+            padding-right: 0;
+            line-height: 32px;
+            background: #E33E33;
+            text-align: center;
+        }
     </style>
     <h1>邢栋的个人网页</h1>
     <script>
@@ -120,22 +156,28 @@
     <a href="邢栋作文——中国的世界文化遗产——秦始皇陵.docx">邢栋作文——中国的世界文化遗产——秦始皇陵<br></a>
     <a href="邢栋作文《《那一刻，我长大了》》.docx">邢栋作文《《那一刻，我长大了》》<br></a>
     <hr>
-    <script>
-        function message() {
-            document.write(
-                '在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见的话，欢迎向我反馈，我会尽力实现的😊。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
-            )
-        }
+    <div id="menu">
+        <div class="button">更多信息</div>
+        <ul id="list">
+            <script>
+                function message() {
+                    document.write(
+                        '在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见的话，欢迎向我反馈，我会尽力实现的😊。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
+                    )
+                }
 
-        function git_and_github() {
-            document.write(
-                '你可以注册一个github号和安装git,<a href="https://github.com/xclala/home_page">我的github地址</a>,<br>和几个关联仓库的地址：https://github.com/xclala/javascript_clock,<br>https://github.com/xclala/CommonConstant,<br>https://github.com/xclala/jiuzhaigou,<br>https://github.com/xclala/taichi,<br>https://github.com/xclala/MultiplicationTable,<br>https://github.com/xclala/CommonSquareNumber。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
-            )
-        }
-    </script>
-    <button type="button" onclick="message()">提示</button>
-    <p></p>
-    <button type="button" onclick="git_and_github()">git与github</button>
+                function git_and_github() {
+                    document.write(
+                        '你可以注册一个github号和安装git,<a href="https://github.com/xclala/home_page">我的github地址</a>,<br>和几个关联仓库的地址：https://github.com/xclala/javascript_clock,<br>https://github.com/xclala/CommonConstant,<br>https://github.com/xclala/jiuzhaigou,<br>https://github.com/xclala/taichi,<br>https://github.com/xclala/MultiplicationTable,<br>https://github.com/xclala/CommonSquareNumber。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
+                    )
+                }
+            </script>
+            <button type="button" onclick="message()">提示</button>
+            <p></p>
+            <button type="button" onclick="git_and_github()">git与github</button>
+            <p></p>
+        </ul>
+    </div>
     <p></p>
     <small>本网页是邢栋的个人网页官网，请注意甄别。</small>
     <hr>
