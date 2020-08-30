@@ -38,7 +38,7 @@
 
         #menu #list {
             max-height: 0;
-            transition: max-height 0.25s ease-out;
+            transition: max-height 0.25s ease;
             overflow: hidden;
             background: #f5f4f4;
             width: 80px;
@@ -65,7 +65,12 @@
             padding-right: 0;
             line-height: 32px;
             background: #E33E33;
+            color:yellowgreen;
             text-align: center;
+        }
+        button{
+        	background: yellowgreen;
+        	color:red;
         }
     </style>
     <h1>邢栋的个人网页</h1>
@@ -171,11 +176,15 @@
                         '你可以注册一个github号和安装git,<a href="https://github.com/xclala/home_page">我的github地址</a>,<br>和几个关联仓库的地址：https://github.com/xclala/javascript_clock,<br>https://github.com/xclala/CommonConstant,<br>https://github.com/xclala/jiuzhaigou,<br>https://github.com/xclala/taichi,<br>https://github.com/xclala/MultiplicationTable,<br>https://github.com/xclala/CommonSquareNumber。<br><a href="https://xclala.github.io/home_page/">返回首页</a>'
                     )
                 }
+                function browser() {
+                    window.alert("使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！")
+                }
             </script>
+            <button type="button" onclick="browser()">推荐的浏览器</button>
+            <p></p>
             <button type="button" onclick="message()">提示</button>
             <p></p>
-            <button type="button" onclick="git_and_github()">git与github</button>
-            <p></p>
+            <button type="button" onclick="git_and_github()">git与github</button>        
         </ul>
     </div>
     <p></p>
