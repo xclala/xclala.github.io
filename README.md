@@ -1,5 +1,6 @@
 # home_page
-邢栋的个人网页官网源代码
+邢栋的个人网页官网源代码<br>
+欢迎大家贡献代码！<br>
 关联仓库：<br>
 [常见常数](https://github.com/xclala/CommonConstant)<br>
 [九寨沟](https://github.com/xclala/jiuzhaigou)<br>
