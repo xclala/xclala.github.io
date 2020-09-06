@@ -18,7 +18,7 @@
 
         calc <= (html.TR(html.TD(x) for x in line) for line in lines)
 
-        document <= calc
+        document <= calc+html.HR()
 
         result = document["result"] 
 
@@ -26,7 +26,7 @@
             element = event.target
             value = element.text
             if value not in "=C":
-                if result.text in ["0", "error"]:
+                if result.text in ["0", "错误"]:
                     result.text = value
                 else:
                     result.text = result.text + value
@@ -34,9 +34,10 @@
                 result.text = ""
             elif value == "=":
                 try:
+                    document <= result.text+html.BR()
                     result.text = eval(result.text)
                 except:
-                    result.text = "error"
+                    result.text = "错误"
 
         for button in document.select("td"):
             button.bind("click", action)
