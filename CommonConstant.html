@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>常见常数学习</title>
+    <strong>推荐使用非触摸屏电脑最新稳定版chrome浏览器！</strong>
+</head>
+
+<body>
+    <style>
+        html {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            background-color: #d0e4fe;
+        }
+
+        h1 {
+            color: orange;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            text-align: right;
+        }
+
+        h1:hover {
+            color: purple;
+        }
+
+        p:hover {
+            color: red;
+        }
+
+        .card {
+            position: relative;
+            width: 750px;
+            height: 50px;
+            perspective: 1000px;
+        }
+
+        .num,
+        .numback {
+            background-color: rgba(255, 255, 100, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: all 0.8s ease;
+        }
+
+        .message,
+        .messageback {
+            background-color: #d0e4fe;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: all 7s ease-in-out;
+        }
+
+        .num {
+            transform: rotateY(0deg);
+        }
+
+        .numback {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover .num {
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .numback {
+            transform: rotateY(0deg);
+        }
+
+        .message {
+            transform: rotateY(0deg);
+        }
+
+        .messageback {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover .message {
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .messageback {
+            transform: rotateY(0deg);
+        }
+    </style>
+    <h1>常见常数学习</h1>
+    <i>数学常数:</i>
+
+    <div class="card">
+        <div class="num">π</div>
+        <div class="numback">π≈3.1415926535897932384626433832795028841971693993751058209</div>
+    </div>
+    <div class="card">
+        <div class="num">e</div>
+        <div class="numback">e≈2.7182818284590452353602874713526624977572470936999</div>
+    </div>
+    <div class="card">
+        <div class="num">Φ</div>
+        <div class="numback">Φ=(√5-1)/2≈0.6180339887498948</div>
+    </div>
+    <div class="card">
+        <div class="num">i</div>
+        <div class="numback">i=√-1</div>
+    </div>
+    <div class="card">
+        <div class="num">√2</div>
+        <div class="numback">√2≈1.414213562373095048801688724209698078569671875376948073176679</div>
+    </div>
+
+
+    <p>（π代表圆周率，e代表自然常数，Φ代表黄金比例，i代表虚数单位，∞代表无穷大，√2代表毕达哥拉斯常数。）</p>
+    <i>物理常数:</i>
+    <div class="card">
+        <div class="num">c</div>
+        <div class="numback">最佳实验值：299792458±1.2m/s 供计算用值：3.00×10^8m/s</div>
+    </div>
+    <div class="card">
+        <div class="num">u</div>
+        <div class="numback">最佳实验值：(1.6605655±0.0000086)×10^－27kg 供计算用值：1.66×10^－27kg</div>
+    </div>
+    <div class="card">
+        <div class="num">me</div>
+        <div class="numback">最佳实验值： (9.109534±0.000047)×10^－31kg 供计算用值：9.11×10^－31kg</div>
+    </div>
+    <div class="card">
+        <div class="num">mp</div>
+        <div class="numback">最佳实验值： (1.6726485±0.0000086)×10^－27kg 供计算用值：1.673×10^－27kg</div>
+    </div>
+    <div class="card">
+        <div class="num">mn</div>
+        <div class="numback">最佳实验值：(1.6749543±0.0000086)×10^－27kg 供计算用值：1.675×10^－27kg</div>
+    </div>
+    <p>（c代表光速，u代表原子质量单位，me代表电子静止质量，mp代表质子静止质量，mn代表中子静止质量。）</p>
+    <div contenteditable="true">在这里编辑！！！</div>
+    <div class="card">
+        <div class="message"><b>自由编辑区：<br></b></div>
+        <div class="messageback">恭喜你发现了这个藏的很深的彩蛋（你可以把你知道的其他常数写在自由编辑区里）<br></div>
+</body>
+
+</html>
