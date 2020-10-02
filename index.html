@@ -259,45 +259,52 @@
 			<button type="button" onclick="git_and_github()">git与github</button>
 		</ul>
 	</div>
+	<div id="menu">
+		<div class="button">颜色模式</div>
+		<ul id="list">
+			<script>
+				function dark() {
+					document.body.style.backgroundColor = "black"
+					document.getElementById("h").style.color = "cyan"
+					document.getElementById("m").style.color = "white"
+					document.getElementById("mm").style.color = "white"
+					document.getElementById("mmm").style.color = "white"
+					document.getElementById("mmmm").style.color = "white"
+					document.getElementById("mmmmm").style.color = "white"
+					document.getElementById("mmmmmm").style.color = "white"
+				}
+
+				function light() {
+					document.body.style.backgroundColor = "white"
+					document.getElementById("h").style.color = "green"
+					document.getElementById("m").style.color = "black"
+					document.getElementById("mm").style.color = "black"
+					document.getElementById("mmm").style.color = "black"
+					document.getElementById("mmmm").style.color = "black"
+					document.getElementById("mmmmm").style.color = "black"
+					document.getElementById("mmmmmm").style.color = "black"
+				}
+
+				function Default() {
+					document.body.style.backgroundColor = "#d0e4fe"
+					document.getElementById("h").style.color = "rosybrown"
+					document.getElementById("m").style.color = "black"
+					document.getElementById("mm").style.color = "black"
+					document.getElementById("mmm").style.color = "black"
+					document.getElementById("mmmm").style.color = "black"
+					document.getElementById("mmmmm").style.color = "black"
+					document.getElementById("mmmmmm").style.color = "black"
+				}
+			</script>
+			<noscript>你的浏览器不支持javascript！</noscript>
+			<button type="button" onclick="dark()">深色模式</button>
+			<p></p>
+			<button type="button" onclick="light()">浅色模式</button>
+			<p></p>
+			<button type="button" onclick="Default()">默认</button>
+		</ul>
+	</div>
 	<h1 id="h">邢栋的个人网页</h1>
-	<script>
-		function dark(){
-			document.body.style.backgroundColor = "black"
-			document.getElementById("h").style.color = "cyan"
-			document.getElementById("m").style.color = "white"
-			document.getElementById("mm").style.color = "white"
-			document.getElementById("mmm").style.color = "white"
-			document.getElementById("mmmm").style.color = "white"
-			document.getElementById("mmmmm").style.color = "white"
-			document.getElementById("mmmmmm").style.color = "white"
-		}
-		function light(){
-			document.body.style.backgroundColor = "white"
-			document.getElementById("h").style.color = "green"
-			document.getElementById("m").style.color = "black"
-			document.getElementById("mm").style.color = "black"
-			document.getElementById("mmm").style.color = "black"
-			document.getElementById("mmmm").style.color = "black"
-			document.getElementById("mmmmm").style.color = "black"
-			document.getElementById("mmmmmm").style.color = "black"
-		}
-		function Default(){
-			document.body.style.backgroundColor = "#d0e4fe"
-			document.getElementById("h").style.color = "rosybrown"
-			document.getElementById("m").style.color = "black"
-			document.getElementById("mm").style.color = "black"
-			document.getElementById("mmm").style.color = "black"
-			document.getElementById("mmmm").style.color = "black"
-			document.getElementById("mmmmm").style.color = "black"
-			document.getElementById("mmmmmm").style.color = "black"
-		}
-	</script>
-	<noscript>你的浏览器不支持javascript！</noscript>
-	<button type="button" onclick="dark()">深色模式</button>
-	<p></p>
-	<button type="button" onclick="light()">浅色模式</button>
-	<p></p>
-	<button type="button" onclick="Default()">默认</button>
 	<strong id="m"><br>自我介绍：</strong>
 	<img src="邢栋头像.jpeg" height="450" width="230">
 	<p id="mm">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
