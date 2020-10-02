@@ -264,14 +264,17 @@
 		function dark(){
 			document.body.style.backgroundColor = "black"
 			document.getElementById("h").style.color = "cyan"
+			document.getElementById("m").style.color = "white"
 		}
 		function light(){
 			document.body.style.backgroundColor = "white"
 			document.getElementById("h").style.color = "green"
+			document.getElementById("m").style.color = "black"
 		}
 		function Default(){
 			document.body.style.backgroundColor = "#d0e4fe"
 			document.getElementById("h").style.color = "rosybrown"
+			document.getElementById("m").style.color = "black"
 		}
 	</script>
 	<noscript>你的浏览器不支持javascript！</noscript>
@@ -280,18 +283,18 @@
 	<button type="button" onclick="light()">浅色模式</button>
 	<p></p>
 	<button type="button" onclick="Default()">默认</button>
-	<strong><br>自我介绍：</strong>
+	<strong id="m"><br>自我介绍：</strong>
 	<img src="邢栋头像.jpeg" height="450" width="230">
-	<p>大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
+	<p id="m">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
 	<p></p>
 	<hr>
-	<small>本网页是邢栋的个人网页官网，请注意甄别。</small>
+	<small id="m">本网页是邢栋的个人网页官网，请注意甄别。</small>
 	<hr>
-	<p>使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！）</p>
+	<p id="m">使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！）</p>
 	<hr>
-	<p>下面是自由编辑区。</p>
+	<p id="m">下面是自由编辑区。</p>
 	<div contenteditable="true">
-		<strong>在这里编辑！！！</strong>
+		<strong id="m">在这里编辑！！！</strong>
 	</div>
 </body>
 
