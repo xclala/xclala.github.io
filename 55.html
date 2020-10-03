@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>分数公式</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #d0e4fe;
+        }
+
+        h1 {
+            color: yellowgreen;
+            text-align: center;
+        }
+
+        h1:hover {
+            color:orangered;
+            font-size: 50px;
+        }
+
+        #menu {
+            display: inline-block;
+        }
+
+        #menu #list {
+            max-height: 0;
+            transition: max-height 0.25s ease;
+            overflow: hidden;
+            background: #f5f4f4;
+            width: 80px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #menu:hover #list {
+            max-height: 1000px;
+            /*⬆列表长*/
+            transition: max-height 0.25s ease;
+            width: 290px;
+            /*⬆列表宽*/
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            height: 32px;
+            /*⬆按钮长*/
+            width: 290px;
+            /*⬆按钮宽*/
+            margin-top: 6px;
+            border-radius: 10px;
+            color: #fff;
+            padding-left: 0;
+            padding-right: 0;
+            line-height: 32px;
+            background: plum;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <div id="menu">
+        <div class="button">比大小</div>
+        <ul id="list">
+            <p>a/b O c/d 若ad&lt; cb 则a/b&lt;c/d 反之亦然</p>
+        </ul>
+    </div>
+    <div id="menu">
+        <div class="button">加或减</div>
+        <ul id="list">
+            <p>a/b土c/d=(ad土cb)/bd (b,d不等于0)</p>
+        </ul>
+    </div>
+    <div id="menu">
+        <div class="button">乘</div>
+        <ul id="list">
+            <p>(a/b)X(c/d)=ac/bd</p>
+        </ul>
+    </div>
+    <div id="menu">
+        <div class="button">除</div>
+        <ul id="list">
+            <p>(a/b)/(c/d)=a/b/cXd</p>
+        </ul>
+    </div>
+    <h1>分数公式</h1>
+</body>
+
+</html>
