@@ -42,8 +42,22 @@
 </script>
 
 <body onLoad="getnow()">
+    <script>
+        function dark() {
+            document.body.style.backgroundColor = "black"
+            document.getElementById("nowspan").style.color = "white"
+        }
+
+        function light() {
+            document.body.style.backgroundColor = "white"
+            document.getElementById("nowspan").style.color = "black"
+        }
+    </script>
+    <button type="button" onclick="dark()">深色模式</button>
+    <p></p>
+    <button type="button" onclick="light()">浅色模式</button>
     <style>
-        h1{
+        h1 {
             text-align: center;
             font-size: 100px;
         }
