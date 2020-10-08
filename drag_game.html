@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖动小游戏</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .div1,
+        .div2,
+        .div3,
+        .div4,
+        .div5 {
+            margin: 0 20px;
+            border-radius: 30px;
+            float: left;
+            width: 200px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        i {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .p1 {
+            width: 50px;
+            background-color: pink;
+            margin: 5px 0;
+        }
+
+        .p2 {
+            width: 80px;
+            background-color: burlywood;
+            margin: 5px 0;
+        }
+
+        .p3 {
+            width: 110px;
+            background-color: rgb(133, 88, 29);
+            margin: 5px 0;
+        }
+
+        .p4 {
+            width: 140px;
+            background-color: rgb(172, 37, 48);
+            margin: 5px 0;
+        }
+
+        .p5 {
+            width: 170px;
+            background-color: rgb(17, 182, 31);
+            margin: 5px 0;
+        }
+
+        .p6 {
+            width: 200px;
+            background-color: rgb(90, 33, 155);
+            margin: 5px 0;
+        }
+
+        .p1,
+        .p2,
+        .p3,
+        .p4,
+        .p5,
+        .p6 {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1" class="div1">
+        <!-- 在h5中，如果想拖拽元素，就必须为元素添加draggable="true"。图片和超链接默认就可以拖拽 -->
+        <i id="pe1" class="p1" draggable="true">1</i>
+        <i id="pe3" class="p3" draggable="true">3</i>
+        <i id="pe5" class="p5" draggable="true">5</i>
+    </div>
+    <div id="div2" class="div2"></div>
+    <div id="div3" class="div3"></div>
+    <div id="div4" class="div4"></div>
+    <div id="div5" class="div5">
+        <i id="pe2" class="p2" draggable="true">2</i>
+        <i id="pe4" class="p4" draggable="true">4</i>
+        <i id="pe6" class="p6" draggable="true">6</i>
+    </div>
+    <script>
+        /* 拖拽元素支持的事件
+            ondrag 应用于拖拽元素，整个拖拽过程都会调s用
+            ondragstart 应用于拖拽元素，当拖拽开始时调用
+            ondragleave 应用于拖拽元素，当鼠标离开拖拽元素是调用
+            ondragend 应用于拖拽元素，当拖拽结束时调用
+
+            目标元素支持的事件
+            ondragenter 应用于目标元素，当拖拽元素进入时调用
+            ondragover 应用于目标元素，当停留在目标元素上时调用
+            ondrop 应用于目标元素，当在目标元素上松开鼠标时调用
+            ondragleave 应用于目标元素，当鼠标离开目标元素时调用
+        */
+
+        // var obj = null; /* 当前被拖拽的值*/
+
+        document.ondragstart = function (e) {
+            /*通过dataTransfer来实现数据的存储与获取
+                setData(format, data)
+                format: 数据的类型： text/html  text/uri-list
+                Data: 数据： 一般来说是字符串值
+            */
+            // e.dataTransfer.setData("Text", e.target.id);
+            e.target.style.opacity = 0.5
+            e.dataTransfer.setData("text", e.target.id);
+            console.log(e.target.id)
+        }
+
+        document.ondragend = function (e) {
+            e.target.style.opacity = 1;
+        }
+
+        /*浏览器默认会阻止ondrop事件：我们必须在ondrapover中阻止默认行为*/
+        document.ondragover = function (e) {
+            e.preventDefault();
+        }
+
+        document.ondrop = function (e) {
+            /*通过e.dataTransfer.setData存储的数据，只能在drop事件中获取*/
+            var data = e.dataTransfer.getData("text");
+            e.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+
+</html>
