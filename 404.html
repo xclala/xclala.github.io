@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+	<title>邢栋的个人网页官网</title>
+	<link rel="icon" type="image/x-ico" href="favicon.ico">
+</head>
+<script type="text/javascript">
+	alert("欢迎！！！")
+	function getnow() {
+		//1、获得当前时间，格式化时间
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;
+		if (month < 10) {
+			month = "0" + month;
+		}
+		var date = now.getDate();
+		if (date < 10) {
+			date = "0" + date;
+		}
+		var hour = now.getHours();
+		if (hour < 10) {
+			hour = "0" + hour;
+		}
+		var minute = now.getMinutes();
+		if (minute < 10) {
+			minute = "0" + minute;
+		}
+		var second = now.getSeconds();
+		if (second < 10) {
+			second = "0" + second;
+		}
+		var nowstr = year + "年" + month + "月" + date + "日  " + hour + ":" + minute + ":" + second;
+		//alert(nowstr);
+		//2、显示时间 html
+		//获得标签对象
+		var nowspan = document.getElementById("nowspan");
+		nowspan.innerHTML = nowstr;
+		//3、使时间动起来
+		setTimeout("getnow()", 1000);
+	}
+</script>
+
+<body onload="getnow()">
+	<style>
+		html {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+
+		body {
+			background-color: #d0e4fe;
+		}
+
+		h1 {
+			color: rosybrown;
+			text-align: center;
+		}
+
+		h1:hover {
+			font-size: 60px;
+		}
+
+
+		#menu {
+			display: inline-block;
+		}
+
+		#menu #list {
+			max-height: 0;
+			transition: max-height 0.25s ease;
+			overflow: hidden;
+			background: #f5f4f4;
+			width: 80px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		#menu:hover #list {
+			max-height: 1000px;
+			/*⬆列表长*/
+			transition: max-height 0.25s ease;
+			width: 500px;
+			/*⬆列表宽*/
+			margin: 0;
+			padding: 0;
+		}
+
+		.button {
+			height: 32px;
+			/*⬆按钮长*/
+			width: 300px;
+			/*⬆按钮宽*/
+			margin-top: 6px;
+			border-radius: 10px;
+			color: #fff;
+			padding-left: 0;
+			padding-right: 0;
+			line-height: 32px;
+			background: plum;
+			color: white;
+			text-align: center;
+		}
+
+		button {
+			background: yellowgreen;
+			color: blueviolet;
+			border-radius: 100px;
+		}
+
+		strong:hover {
+			font-size: 30px;
+		}
+
+		img {
+			border-radius: 100px;
+			width: auto;
+			height: auto;
+		}
+	</style>
+	<div id="menu">
+		<div class="button">自制网页</div>
+		<ul id="list">
+			<a href="ShiningText.html">高亮文字<br></a>
+			<a href="NeonText.html">发光文字<br></a>
+			<a href="colorful_python.html">变色文字<br></a>
+			<a href="jiuzhaigou.html">九寨沟<br></a>
+			<a href="CommonConstant.html">常见常数<br></a>
+			<a href="CommonSquareNumber.html">常见数的平方<br></a>
+			<a href="MultiplicationTable.html">九九乘法表<br></a>
+			<a href="taichi.html">旋转太极<br></a>
+			<a href="55.html">分数公式<br></a>
+			<a href="4.html">正方体旋转<br></a>
+			<a href="3.html">python简介<br></a>
+			<a href="2.html">小猫笑脸动画<br></a>
+			<a href="1.html">3D效果<br></a>
+			<a href="https://xclala.github.io/clock">时钟<br></a>
+			<a href="变色.html">变色动画</a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">自制壁纸</div>
+		<ul id="list">
+			<a href="1.png">壁纸1<br></a>
+			<a href="2.png">壁纸2<br></a>
+			<a href="3.png">壁纸3<br></a>
+			<a href="4.jpeg">壁纸4<br></a>
+			<a href="5.jpeg">壁纸5<br></a>
+			<a href="6.jpeg">壁纸6<br></a>
+			<a href="7.jpeg">壁纸7<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">炫酷图片</div>
+		<ul id="list">
+			<a href="11.png">图片1<br></a>
+			<a href="22.png">图片2<br></a>
+			<a href="33.png">图片3<br></a>
+			<a href="44.png">图片4<br></a>
+			<a href="55.png">图片5<br></a>
+			<a href="66.png">图片6<br></a>
+			<a href="77.png">图片7<br></a>
+			<a href="88.png">图片8<br></a>
+			<a href="99.png">图片9<br></a>
+			<a href="100.png">图片10<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">航天</div>
+		<ul id="list">
+			<a href="黑洞.PNG">黑洞照片<br></a>
+			<a href="“地月合影”.PNG">“地月合影”<br></a>
+			<a href="长征系列.jpg">长征系列<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">美景图片</div>
+		<ul id="list">
+			<a href="111.png">图片1<br></a>
+			<a href="222.png">图片2<br></a>
+			<a href="333.png">图片3<br></a>
+			<a href="444.png">图片4<br></a>
+			<a href="555.png">图片5<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">野生动物</div>
+		<ul id="list">
+			<a href="1111.png">图片1<br></a>
+			<a href="2222.png">图片2<br></a>
+			<a href="3333.png">图片3<br></a>
+			<a href="4444.png">图片4<br></a>
+			<a href="5555.png">图片5<br></a>
+			<a href="6666.png">图片6<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">小鸟</div>
+		<ul id="list">
+			<a href="11111.jpeg">图片1<br></a>
+			<a href="22222.jpeg">图片2<br></a>
+			<a href="33333.jpeg">图片3<br></a>
+			<a href="44444.jpeg">图片4<br></a>
+			<a href="55555.jpeg">图片5<br></a>
+			<a href="66666.jpeg">图片6<br></a>
+			<a href="77777.jpeg">图片7<br></a>
+			<a href="88888.jpeg">图片8<br></a>
+			<a href="99999.jpeg">图片9<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">数学</div>
+		<ul id="list">
+			<a href="https://weibo.com/ttarticle/p/show?id=2309404541413726486603">爱因斯坦如何证明勾股定理<br></a>
+			<a href="负负得正证明.docx">负负得正证明<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">广播体操</div>
+		<ul id="list">
+			<a href="小学生广播体操《七彩阳光》.mp4">小学生广播体操《七彩阳光》<br></a>
+			<a href="小学生广播体操《希望风帆》.mp4">小学生广播体操《希望风帆》<br></a>
+			<a href="中学生广播体操《放飞理想》.mp4">中学生广播体操《放飞理想》<br></a>
+			<a href="中学生广播体操《舞动青春》.mp4">中学生广播体操《舞动青春》<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">小学一部分作文</div>
+		<ul id="list">
+			<a href="《草船借箭》读后感.docx">《草船借箭》读后感<br></a>
+			<a href="他感动了.docx">他感动了<br></a>
+			<a href="四年级寒假作业作文邢栋.docx">四年级寒假作业作文邢栋<br></a>
+			<a href="四年级寒假作业作文邢栋（指导）.docx">四年级寒假作业作文邢栋（指导）<br></a>
+			<a href="暑假作业作文1-邢栋.doc">暑假作业作文1-邢栋<br></a>
+			<a href="暑假作业作文2-邢栋.doc">暑假作业作文2-邢栋<br></a>
+			<a href="神奇的探险之旅.docx">神奇的探险之旅<br></a>
+			<a href="逆行者.docx">逆行者<br></a>
+			<a href="邢栋作文——中国的世界文化遗产——秦始皇陵.docx">邢栋作文——中国的世界文化遗产——秦始皇陵<br></a>
+			<a href="邢栋作文《《那一刻，我长大了》》.docx">邢栋作文《《那一刻，我长大了》》<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">初中军训</div>
+		<ul id="list">
+			<a href="111111.jpeg">照片1<br></a>
+			<a href="222222.jpeg">照片2<br></a>
+			<a href="333333.jpeg">照片3<br></a>
+			<a href="444444.jpeg">照片4<br></a>
+			<a href="555555.jpeg">照片5<br></a>
+			<a href="666666.jpeg">照片6<br></a>
+			<a href="1111111.MOV">视频1<br></a>
+			<a href="2222222.MOV">视频2<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">自制表情包</div>
+		<ul id="list">
+			<a href="变脸.rar">变脸</a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">显微镜观察</div>
+		<ul id="list">
+			<a href="111111111.jpeg">瑜伽垫<br></a>
+			<a href="222222222.jpeg">绿色小飞虫<br></a>
+			<a href="444444444.jpg">黑色小飞虫<br></a>
+			<a href="333333333.jpeg">耳屎<br></a>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">颜色模式</div>
+		<ul id="list">
+			<script>
+				function dark() {
+					document.body.style.backgroundColor = "black"
+					document.getElementById("h").style.color = "cyan"
+					document.getElementById("m").style.color = "white"
+					document.getElementById("mm").style.color = "white"
+					document.getElementById("mmm").style.color = "white"
+					document.getElementById("mmmm").style.color = "white"
+					document.getElementById("mmmmm").style.color = "white"
+					document.getElementById("mmmmmm").style.color = "white"
+					document.getElementById("nowspan").style.color = "white"
+				}
+
+				function light() {
+					document.body.style.backgroundColor = "white"
+					document.getElementById("h").style.color = "green"
+					document.getElementById("m").style.color = "black"
+					document.getElementById("mm").style.color = "black"
+					document.getElementById("mmm").style.color = "black"
+					document.getElementById("mmmm").style.color = "black"
+					document.getElementById("mmmmm").style.color = "black"
+					document.getElementById("mmmmmm").style.color = "black"
+					document.getElementById("nowspan").style.color = "black"
+				}
+
+				function Default() {
+					document.body.style.backgroundColor = "#d0e4fe"
+					document.getElementById("h").style.color = "rosybrown"
+					document.getElementById("m").style.color = "black"
+					document.getElementById("mm").style.color = "black"
+					document.getElementById("mmm").style.color = "black"
+					document.getElementById("mmmm").style.color = "black"
+					document.getElementById("mmmmm").style.color = "black"
+					document.getElementById("mmmmmm").style.color = "black"
+					document.getElementById("nowspan").style.color = "black"
+				}
+			</script>
+			<noscript>你的浏览器不支持javascript！</noscript>
+			<button type="button" onclick="dark()">深色模式</button>
+			<p></p>
+			<button type="button" onclick="light()">浅色模式</button>
+			<p></p>
+			<button type="button" onclick="Default()">默认</button>
+		</ul>
+	</div>
+	<div id="menu">
+		<div class="button">更多信息</div>
+		<ul id="list">
+			<script>
+				function message() {
+					document.write(
+						'在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见的话，欢迎向我反馈，我会尽力实现的😊。<br><a href="https://xclala.github.io/home/">返回首页</a>'
+					)
+				}
+
+				function git_and_github() {
+					document.write(
+						'你可以注册一个github号和安装git,<a href="https://github.com/xclala/home/">我的github地址,</a><a href="https://xclala.github.io/home/">返回首页</a>'
+					)
+				}
+
+				function browser() {
+					window.alert("使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！")
+				}
+			</script>
+			<noscript>你的浏览器不支持javascript！</noscript>
+			<button type="button" onclick="browser()">推荐的浏览器</button>
+			<p></p>
+			<button type="button" onclick="message()">提示</button>
+			<p></p>
+			<button type="button" onclick="git_and_github()">git与github</button>
+		</ul>
+	</div>
+	<h1 id="h">邢栋的个人网页</h1>
+	<strong id="m"><br>自我介绍：</strong>
+	<img src="邢栋头像.jpeg" height="450" width="230">
+	<p id="mm">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
+	<p></p>
+	<hr>
+	<small id="mmm">本网页是邢栋的个人网页官网，请注意甄别。</small>
+	<hr>
+	<p id="mmmm">使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！）</p>
+	<hr>
+	<strong id="nowspan"></strong>
+	<hr>
+	<p id="mmmmm">下面是自由编辑区。</p>
+	<div contenteditable="true">
+		<strong id="mmmmmm">在这里编辑！！！</strong>
+	</div>
+</body>
+
+</html>
