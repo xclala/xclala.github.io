@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>乘法好朋友数</title>
+</head>
+
+<body>
+    <style>
+        html {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            background-color: #d0e4fe;
+        }
+
+        h1 {
+            color: orange;
+            text-align: center;
+        }
+
+        b {
+            color: red;
+        }
+
+        i:hover {
+            color: darkblue;
+        }
+
+        h1:hover {
+            color: purple;
+        }
+
+        .card {
+            position: relative;
+            width: 610px;
+            height: 50px;
+            perspective: 1000px;
+        }
+
+        .m,
+        .mb {
+            background-color: rgba(255, 255, 100, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: all 0.8s ease;
+        }
+
+        .m {
+            transform: rotateY(0deg);
+        }
+
+        .mb {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover .m {
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .mb {
+            transform: rotateY(0deg);
+        }
+    </style>
+    <h1>乘法好朋友数</h1>
+    <div class="message">
+        <i>5X2=10<br></i>
+        <i>25X4=100<br></i>
+        <i>125X8=1000<br></i>
+        <i>625X16=10000<br></i>
+        <i>3125X32=100000<br></i>
+        <i>15625X64=1000000<br></i>
+        <div contenteditable="true"></div>
+    </div>
+    <div class="card">
+        <div class="m">规律</div>
+        <div class="mb"><b>第一个因数依次呈5倍递增，第二个因数依次呈2倍递增，所以积依次呈10倍递增。</b></div>
+</body>
