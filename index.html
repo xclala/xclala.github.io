@@ -8,6 +8,7 @@
 </head>
 <script type="text/javascript">
 	alert("欢迎！！！")
+
 	function getnow() {
 		//1、获得当前时间，格式化时间
 		var now = new Date();
@@ -56,8 +57,19 @@
 		}
 
 		h1 {
-			color: rosybrown;
+			color: #f35626;
+			animation: hue 5s infinite linear;
 			text-align: center;
+		}
+
+		@keyframes hue {
+			from {
+				-webkit-filter: hue-rotate(0deg);
+			}
+
+			to {
+				-webkit-filter: hue-rotate(360deg);
+			}
 		}
 
 		h1:hover {
