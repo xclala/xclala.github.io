@@ -5,9 +5,25 @@
     <title>变色动画</title>
     <h1>变色动画</h1>
     <style>
-        h1{
-           text-align:center; 
+        h1 {
+            text-align: center;
         }
+
+        h1:hover {
+            color: #f35626;
+            animation: hue 5s infinite linear;
+        }
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
+        }
+
         div {
             width: 100px;
             height: 100px;

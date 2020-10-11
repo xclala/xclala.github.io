@@ -7,6 +7,23 @@
 </head>
 
 <body>
+    <style>
+        h1 {
+            color: #f35626;
+            animation: hue 5s infinite linear;
+            text-align: center;
+        }
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="MultiplicationTableStyle.css">
     <h1>九九乘法表</h1>
     <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=309342635,3011235886&fm=26&gp=0.jpg">

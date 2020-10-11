@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang=“ch”>
+<html lang="ch">
+
 <head>
     <meta charset="UTF-8">
     <title>常见数的平方</title>
@@ -18,14 +19,21 @@
         }
 
         h1 {
-            color: red;
+            color: #f35626;
+            animation: hue 5s infinite linear;
             text-align: center;
         }
 
-        h1:hover {
-            color: orangered;
-            text-align: left;
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
         }
+
 
         .card {
             position: relative;
@@ -129,4 +137,5 @@
         <div class="numback">25X25=625</div>
     </div>
 </body>
+
 </html>

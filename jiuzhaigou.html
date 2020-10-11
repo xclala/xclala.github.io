@@ -19,12 +19,22 @@
         }
 
         h1 {
-            color: orangered;
+            color: #f35626;
+            animation: hue 5s infinite linear;
             text-align: center;
         }
 
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
+        }
+
         h1:hover {
-            color:red;
             font-size: 50px;
         }
     </style>
@@ -39,4 +49,5 @@
     <a href="88888888.png">图片8<br></a>
     <a href="99999999.png">图片9<br></a>
 </body>
+
 </html>

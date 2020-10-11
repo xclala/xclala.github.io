@@ -20,8 +20,19 @@
         }
 
         h1 {
-            color: orange;
+            color: #f35626;
+            animation: hue 5s infinite linear;
             text-align: center;
+        }
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
         }
 
         p {
