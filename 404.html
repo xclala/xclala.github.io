@@ -7,13 +7,23 @@
 	<link rel="icon" type="image/x-ico" href="favicon.ico">
 </head>
 <script type="text/javascript">
-	alert("欢迎！！！")
+	var t = new Date().getHours()
+	if (t >= 6 && t < 10) {
+		alert("早上好！！！")
+	} else if (t >= 10 && t < 13) {
+		alert("中午好！！！")
+	} else if (t >= 13 && t < 16) {
+		alert("下午好！！！")
+	} else if (t >= 16 && t < 6) {
+		alert("晚上好！！！")
+	}
 
 	function getnow() {
 		//1、获得当前时间，格式化时间
 		var now = new Date();
 		var year = now.getFullYear();
 		var month = now.getMonth() + 1;
+		var week = new Date().getDay();
 		if (month < 10) {
 			month = "0" + month;
 		}
@@ -33,7 +43,30 @@
 		if (second < 10) {
 			second = "0" + second;
 		}
-		var nowstr = year + "年" + month + "月" + date + "日  " + hour + ":" + minute + ":" + second;
+		switch (week) {
+			case 0:
+				week = "星期日";
+				break;
+			case 1:
+				week = "星期一";
+				break;
+			case 2:
+				week = "星期二";
+				break;
+			case 3:
+				week = "星期三";
+				break;
+			case 4:
+				week = "星期四";
+				break;
+			case 5:
+				week = "星期五";
+				break;
+			case 6:
+				week = "星期六";
+				break;
+		}
+		var nowstr = year + "年" + month + "月" + date + "日  " + hour + ":" + minute + ":" + second + " " + week;
 		//alert(nowstr);
 		//2、显示时间 html
 		//获得标签对象
@@ -133,6 +166,7 @@
 			font-size: 30px;
 		}
 
+
 		@keyframes hue {
 			from {
 				-webkit-filter: hue-rotate(0deg);
@@ -148,13 +182,22 @@
 			width: auto;
 			height: auto;
 		}
+
+		.up {
+			color: #f35626;
+			animation: hue 5s infinite linear;
+		}
+
+		.down {
+			color: #f35626;
+			animation: hue 5s infinite linear;
+		}
 	</style>
 	<div id="menu">
 		<div class="button">自制网页</div>
 		<ul id="list">
 			<a href="ShiningText.html">高亮文字<br></a>
 			<a href="NeonText.html">发光文字<br></a>
-			<a href="colorful_python.html">变色文字<br></a>
 			<a href="jiuzhaigou.html">九寨沟<br></a>
 			<a href="CommonConstant.html">常见常数<br></a>
 			<a href="CommonSquareNumber.html">常见数的平方<br></a>
@@ -343,7 +386,7 @@
 			<script>
 				function message() {
 					document.write(
-						'在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见的话，欢迎向我反馈，我会尽力实现的😊。<br><a href="https://xclala.github.io/home/">返回首页</a>'
+						'在chrome浏览器中，按F12查看源代码。<br>刷新网页会消失自由编辑区内所有文字。<br>如果有什么意见或bug的话，欢迎向我反馈，我会尽力实现或修复的😊。<br><a href="https://xclala.github.io/home/">返回首页</a>'
 					)
 				}
 
@@ -366,6 +409,7 @@
 		</ul>
 	</div>
 	<h1>邢栋的个人网页</h1>
+	<a href="https://xclala.github.io/home#nowspan" class="down">滚动到最下</a>
 	<strong><br>自我介绍：</strong>
 	<img src="邢栋头像.jpeg" height="450" width="230">
 	<p id="mm">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
@@ -376,6 +420,8 @@
 	<p id="mmmm">使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！）</p>
 	<hr>
 	<strong id="nowspan"></strong>
+	<hr>
+	<a class="up" href="https://xclala.github.io/home">滚动到最上</a>
 	<hr>
 	<p id="mmmmm">下面是自由编辑区。</p>
 	<div contenteditable="true">
