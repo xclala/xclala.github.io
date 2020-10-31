@@ -8,13 +8,16 @@
 </head>
 <script type="text/javascript">
 	var t = new Date().getHours()
-	if (t >= 6 && t < 10) {
+	if (t == 6 && t == 7 && t == 8 && t == 9) {
 		alert("早上好！！！")
-	} else if (t >= 10 && t < 13) {
+
+	} else if (t == 10 && t == 11 && t == 12) {
 		alert("中午好！！！")
-	} else if (t >= 13 && t < 16) {
+
+	} else if (t == 13 && t == 14 && t == 15 && t == 16) {
 		alert("下午好！！！")
-	} else if (t >= 16 && t < 6) {
+
+	} else {
 		alert("晚上好！！！")
 	}
 
@@ -365,7 +368,6 @@
 
 				function Default() {
 					document.body.style.backgroundColor = "#d0e4fe"
-					document.getElementById("h").style.color = "rosybrown"
 					document.getElementById("mm").style.color = "black"
 					document.getElementById("mmm").style.color = "black"
 					document.getElementById("mmmm").style.color = "black"
