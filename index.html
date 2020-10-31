@@ -34,14 +34,28 @@
 		if (second < 10) {
 			second = "0" + second;
 		}
-		switch (week){
-			case 0:week="星期日";break;
-			case 1:week="星期一";break;
-			case 2:week="星期二";break;
-			case 3:week="星期三";break;
-			case 4:week="星期四";break;
-			case 5:week="星期五";break;
-			case 6:week="星期六";break;
+		switch (week) {
+			case 0:
+				week = "星期日";
+				break;
+			case 1:
+				week = "星期一";
+				break;
+			case 2:
+				week = "星期二";
+				break;
+			case 3:
+				week = "星期三";
+				break;
+			case 4:
+				week = "星期四";
+				break;
+			case 5:
+				week = "星期五";
+				break;
+			case 6:
+				week = "星期六";
+				break;
 		}
 		var nowstr = year + "年" + month + "月" + date + "日  " + hour + ":" + minute + ":" + second + " " + week;
 		//alert(nowstr);
@@ -158,6 +172,11 @@
 			border-radius: 100px;
 			width: auto;
 			height: auto;
+		}
+
+		.up {
+			color: #f35626;
+			animation: hue 5s infinite linear;
 		}
 
 		.down {
@@ -392,6 +411,8 @@
 	<p id="mmmm">使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！）</p>
 	<hr>
 	<strong id="nowspan"></strong>
+	<hr>
+	<a class="up" href="https://xclala.github.io/home">滚动到最上</a>
 	<hr>
 	<p id="mmmmm">下面是自由编辑区。</p>
 	<div contenteditable="true">
