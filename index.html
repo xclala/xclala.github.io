@@ -7,7 +7,16 @@
 	<link rel="icon" type="image/x-ico" href="favicon.ico">
 </head>
 <script type="text/javascript">
-	alert("欢迎！！！")
+	var t = new Date().getHours()
+	if (t >= 6 && t < 10) {
+		alert("早上好！！！")
+	} else if (t >= 10 && t < 13) {
+		alert("中午好！！！")
+	} else if (t >= 13 && t < 16) {
+		alert("下午好！！！")
+	} else if (t >= 16 && t < 6) {
+		alert("晚上好！！！")
+	}
 
 	function getnow() {
 		//1、获得当前时间，格式化时间
