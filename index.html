@@ -8,18 +8,35 @@
 </head>
 <script type="text/javascript">
 	var t = new Date().getHours()
-	if (t == 6 && t == 7 && t == 8 && t == 9) {
-		alert("早上好！！！")
-
-	} else if (t == 10 && t == 11 && t == 12) {
-		alert("中午好！！！")
-
-	} else if (t == 13 && t == 14 && t == 15 && t == 16) {
-		alert("下午好！！！")
-
-	} else {
-		alert("晚上好！！！")
+	switch (t) {
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+			alert("早上好！！！")
+			break;
+		case 10:
+		case 11:
+		case 12:
+			alert("中午好！！！")
+			break;
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+			alert("下午好！！！")
+			break;
+		default:
+			document.body.style.backgroundColor = "black"
+			document.getElementById("mm").style.color = "white"
+			document.getElementById("mmm").style.color = "white"
+			document.getElementById("mmmm").style.color = "white"
+			document.getElementById("mmmmm").style.color = "white"
+			alert("晚上好！！！")
+			break;
 	}
+	//早上6~9，中午10~12，下午13~16，其他下午。
+
 
 	function getnow() {
 		//1、获得当前时间，格式化时间
