@@ -7,37 +7,6 @@
 	<link rel="icon" type="image/x-ico" href="favicon.ico">
 </head>
 <script type="text/javascript">
-	var t = new Date().getHours()
-	switch (t) {
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			alert("早上好！！！")
-			break;
-		case 10:
-		case 11:
-		case 12:
-			alert("中午好！！！")
-			break;
-		case 13:
-		case 14:
-		case 15:
-		case 16:
-			alert("下午好！！！")
-			break;
-		default:
-			document.body.style.backgroundColor = "black"
-			document.getElementById("mm").style.color = "white"
-			document.getElementById("mmm").style.color = "white"
-			document.getElementById("mmmm").style.color = "white"
-			document.getElementById("mmmmm").style.color = "white"
-			alert("晚上好！！！")
-			break;
-	}
-	//早上6~9，中午10~12，下午13~16，其他下午。
-
-
 	function getnow() {
 		//1、获得当前时间，格式化时间
 		var now = new Date();
@@ -60,7 +29,7 @@
 			minute = "0" + minute;
 		}
 		var second = now.getSeconds();
-		if (second < 10) {
+		if (second < script 10) {
 			second = "0" + second;
 		}
 		switch (week) {
