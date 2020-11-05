@@ -20,7 +20,8 @@
 		if (date < 10) {
 			date = "0" + date;
 		}
-		var hour = now.getHours();
+		var
+			hour = now.getHours();
 		if (hour < 10) {
 			hour = "0" + hour;
 		}
@@ -29,7 +30,7 @@
 			minute = "0" + minute;
 		}
 		var second = now.getSeconds();
-		if (second < script 10) {
+		if (second < 10) {
 			second = "0" + second;
 		}
 		switch (week) {
@@ -55,13 +56,10 @@
 				week = "星期六";
 				break;
 		}
-		var nowstr = year + "年" + month + "月" + date + "日  " + hour + ":" + minute + ":" + second + " " + week;
-		//alert(nowstr);
-		//2、显示时间 html
-		//获得标签对象
+		var nowstr = year + "年" +
+			month + "月" + date + "日 " + hour + ":" + minute + ":" + second + " " + week; //alert(nowstr); //2、显示时间
 		var nowspan = document.getElementById("nowspan");
-		nowspan.innerHTML = nowstr;
-		//3、使时间动起来
+		nowspan.innerHTML = nowstr; //3、使时间动起来
 		setTimeout("getnow()", 1000);
 	}
 </script>
