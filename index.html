@@ -333,32 +333,6 @@
 		</ul>
 	</div>
 	<div id="menu">
-		<div class="button">颜色模式</div>
-		<ul id="list">
-			<script>
-				function dark() {
-					document.body.style.backgroundColor = "black"
-					document.getElementById("mm").style.color = "white"
-					document.getElementById("mmm").style.color = "white"
-					document.getElementById("mmmm").style.color = "white"
-					document.getElementById("mmmmm").style.color = "white"
-				}
-
-				function light() {
-					document.body.style.backgroundColor = "white"
-					document.getElementById("mm").style.color = "black"
-					document.getElementById("mmm").style.color = "black"
-					document.getElementById("mmmm").style.color = "black"
-					document.getElementById("mmmmm").style.color = "black"
-				}
-			</script>
-			<noscript>你的浏览器不支持javascript！</noscript>
-			<button type="button" onclick="dark()">深色模式</button>
-			<p></p>
-			<button type="button" onclick="light()">浅色模式</button>
-		</ul>
-	</div>
-	<div id="menu">
 		<div class="button">更多信息</div>
 		<ul id="list">
 			<script>
@@ -386,7 +360,18 @@
 			<button type="button" onclick="git_and_github()">git与github</button>
 		</ul>
 	</div>
-	<a href="https://xclala.github.io"><h1>邢栋的个人网页</h1></a>
+	<h1>邢栋的个人网页</h1>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var bg = ['black', 'white', '#d0e4fe']
+			var c = 0
+			$("h1").click(function () {
+				$("body").css("background", bg[c % 3])
+				c++
+			})
+		})
+	</script>
 	<a href="https://xclala.github.io#nowspan" class="down">滚动到最下</a>
 	<strong><br>自我介绍：</strong>
 	<img src="邢栋头像.jpeg" height="450" width="230">
