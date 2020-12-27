@@ -390,9 +390,12 @@
 	<script>
 		$(document).ready(function () {
 			var bg = ['black', 'white', '#d0e4fe']
+			var tg = ['white', 'black', 'black']
 			var c = 0
 			$("h1").click(function () {
 				$("body").css("background", bg[c % 3])
+				$("p").css("color", tg[c % 3])
+				$("small").css("color", tg[c % 3])
 				c++
 			})
 		})
