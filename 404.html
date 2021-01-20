@@ -20,21 +20,12 @@
             font-size: xx-large;
             font-weight: bold;
         }
+
+        a {
+            text-decoration-line: none;
+        }
     </style>
     <p>欢迎！<a href="https://xclala.github.io">继续</a></p>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var bg = ['black', 'white']
-            var tg = ['white', 'black']
-            var c = 0
-            $("p").click(function () {
-                $("body").css("background", bg[c % 2])
-                $("p").css("color", tg[c % 2])
-                c++
-            })
-        })
-    </script>
 </body>
 
 </html>
