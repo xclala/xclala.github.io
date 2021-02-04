@@ -7,6 +7,17 @@
 </head>
 
 <body>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var bg = ['black', 'white', '#d0e4fe']
+			var c = 0
+			$("h1").click(function () {
+				$("body").css("background", bg[c % 3])
+				c++
+			})
+		})
+	</script>
     <style>
         body {
             background-color: #d0e4fe;
@@ -71,6 +82,9 @@
             background: plum;
             color: white;
             text-align: center;
+        }
+        #menu:hover .button{
+            background-color: orangered;
         }
     </style>
     <div id="menu">
