@@ -326,6 +326,10 @@
 				function browser() {
 					window.alert("使用非触摸屏电脑最新稳定版chrome效果更佳!（使用触摸屏可能导致某些功能无法起效，甚至重影！")
 				}
+
+				function QRcode(){
+					document.write('<img src="qrcode.png" alt="">')
+				}
 			</script>
 			<noscript>你的浏览器不支持javascript！</noscript>
 			<button type="button" onclick="browser()">推荐的浏览器</button>
@@ -333,6 +337,8 @@
 			<button type="button" onclick="message()">提示</button>
 			<p></p>
 			<button type="button" onclick="git_and_github()">git与github</button>
+			<p></p>
+			<button type="button" onclick="QRcode()">二维码</button>
 		</ul>
 	</div>
 	<h1>邢栋的个人网页</h1>
