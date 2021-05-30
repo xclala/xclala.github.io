@@ -38,19 +38,18 @@
                     if (i === 36000) {
                         i = 1;
                     }
-                    //绘制右侧的黑色半圆
-                    ctx.fillStyle = "#000000";
-                    ctx.beginPath();
-                    ctx.arc(0, 0, 150, Math.PI / 2, 1.5 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
                     //绘制左侧的白色半圆直径都是150
                     ctx.fillStyle = "#FFFFFF";
                     ctx.beginPath();
                     ctx.arc(0, 0, 150, 1.5 * Math.PI, Math.PI / 2, false);
                     ctx.closePath();
                     ctx.fill();
-                   
+                    //绘制右侧的黑色半圆
+                    ctx.fillStyle = "#000000";
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 150, Math.PI / 2, 1.5 * Math.PI, false);
+                    ctx.closePath();
+                    ctx.fill();
                     //绘制下面的黑色圆
                     ctx.fillStyle = "#000000";
                     ctx.beginPath();
@@ -63,19 +62,18 @@
                     ctx.arc(0, -75, 75, 0, 2 * Math.PI, false);
                     ctx.closePath();
                     ctx.fill();
-                     //绘制黑色小圆
-                    ctx.fillStyle = "#000";
-                    ctx.beginPath();
-                    ctx.arc(0, -75, 10, 0, 2 * Math.PI, false);
-                    ctx.closePath();
-                    ctx.fill();
-                    //绘制白色小圆
+                    //绘制两个小圆
                     ctx.fillStyle = "FFFFFF";
                     ctx.beginPath();
                     ctx.arc(0, 75, 10, 0, 2 * Math.PI, false);
                     ctx.closePath();
                     ctx.fill();
-                   
+                    //绘制黑色小圆
+                    ctx.fillStyle = "#000";
+                    ctx.beginPath();
+                    ctx.arc(0, -75, 10, 0, 2 * Math.PI, false);
+                    ctx.closePath();
+                    ctx.fill();
 
                     ctx.closePath();
                     ctx.restore();
