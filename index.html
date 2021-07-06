@@ -68,8 +68,24 @@
 			text-rendering: optimizeLegibility;
 		}
 
-		body {
-			background-color: #E9FDFF;
+		@media(prefers-color-scheme:dark) {
+			body {
+				background-color: black;
+			}
+
+			p {
+				color: white;
+			}
+		}
+
+		@media(prefers-color-scheme:light) {
+			body {
+				background-color: #E9FDFF;
+			}
+
+			p {
+				color: white;
+			}
 		}
 
 		h1 {
@@ -151,7 +167,6 @@
 		}
 
 		strong:hover {
-			font-size: 30px;
 			cursor: pointer;
 		}
 
@@ -302,16 +317,13 @@
 			})
 		})
 	</script>
-	<a href="https://xclala.github.io#nowspan" class="down">⬇️</a>
+	<a href="#mmmmm" class="down">⬇️</a>
 	<strong><br>自我介绍：</strong>
 	<img src="邢栋头像" height="450" width="230">
 	<p id="mm">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
-	<p></p>
 	<a href="https://xclala.gitee.io/clock"><strong id="nowspan"></strong><br></a>
-	<p></p>
 	<small id="mmmm"><br>使用电脑最新稳定版chrome效果更佳。<br></small>
-	<a class="up" href="https://xclala.github.io">⬆️<br></a>
-	<p></p>
+	<a class="up" href="#menu">⬆️<br></a>
 	<p id="mmmmm">下面是自由编辑区(刷新网页会消失自由编辑区内所有文字)</p>
 	<hr>
 	<div contenteditable="true">
