@@ -14,9 +14,18 @@
             text-rendering: optimizeLegibility;
         }
 
-        body {
-            background-color: #E9FDFF;
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: black;
+            }
         }
+
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: #E9FDFF;
+            }
+        }
+
 
         h1 {
             color: #f35626;
@@ -42,10 +51,10 @@
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            var bg = ['black', 'white']
-            var c = 0
+            const BACKGROUNDCOLOR = ['black', 'white']
+            let c = 0
             $("h1").click(function () {
-                $("body").css("background", bg[c % 2])
+                $("body").css("background", BACKGROUNDCOLOR[c % 2])
                 c++
             })
         })

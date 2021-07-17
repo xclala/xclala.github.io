@@ -8,19 +8,33 @@
 
 <body>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			var bg = ['black', 'white', '#d0e4fe']
-			var c = 0
-			$("h1").click(function () {
-				$("body").css("background", bg[c % 3])
-				c++
-			})
-		})
-	</script>
+    <script>
+        $(document).ready(function () {
+            const BACKGROUNDCOLOR = ['black', 'white', '#E9FDFF']
+            let c = 0
+            $("h1").click(function () {
+                $("body").css("background", BACKGROUNDCOLOR[c % 3])
+                c++
+            })
+        })
+    </script>
     <style>
-        body {
-            background-color: #d0e4fe;
+        html {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: black;
+            }
+        }
+
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: #E9FDFF;
+            }
         }
 
         h1 {
@@ -83,7 +97,8 @@
             color: white;
             text-align: center;
         }
-        #menu:hover .button{
+
+        #menu:hover .button {
             background-color: orangered;
         }
     </style>
