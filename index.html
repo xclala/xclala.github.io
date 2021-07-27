@@ -8,55 +8,7 @@
 	<meta name="description" content="邢栋的个人网页">
 	<meta name="author" content="邢栋">
 </head>
-<script type="text/javascript">
-	function getnow() {
-		//获得当前时间，格式化时间
-		const NOW = new Date();
-		const YEAR = NOW.getFullYear();
-		const MONTH = NOW.getMonth() + 1;
-		let week = new Date().getDay();
-		const DATE = NOW.getDate();
-		let hour = NOW.getHours();
-		if (hour < 10) {
-			hour = "0" + hour;
-		}
-		let minute = NOW.getMinutes();
-		if (minute < 10) {
-			minute = "0" + minute;
-		}
-		let second = NOW.getSeconds();
-		if (second < 10) {
-			second = "0" + second;
-		}
-		switch (week) {
-			case 0:
-				week = "星期日";
-				break;
-			case 1:
-				week = "星期一";
-				break;
-			case 2:
-				week = "星期二";
-				break;
-			case 3:
-				week = "星期三";
-				break;
-			case 4:
-				week = "星期四";
-				break;
-			case 5:
-				week = "星期五";
-				break;
-			case 6:
-				week = "星期六";
-				break;
-		}
-		let nowstr = YEAR + "年" +
-			MONTH + "月" + DATE + "日 " + hour + ":" + minute + ":" + second + " " + week; //显示时间
-		document.getElementById("nowspan").innerHTML = nowstr; //使时间动起来
-		setTimeout("getnow()", 1000);
-	}
-</script>
+<script src="./clock/getnow.js"></script>
 
 <body onload="getnow()" ontouchstart>
 	<style>
