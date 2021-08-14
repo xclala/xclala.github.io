@@ -254,26 +254,28 @@
 		</ul>
 	</div>
 	<h1>邢栋的个人网页</h1>
-	<script rel="prefetch" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
-		$(document).ready(function () {
+		window.onload = function () {
 			const BACKGROUNDCOLOR = ['#111114', 'whitesmoke', '#E9FDFF']
 			const TEXTCOLOR = ['white', 'black', 'black']
 			let c = 0
-			$("h1").click(function () {
-				$("body").css("background", BACKGROUNDCOLOR[c % 3])
-				$("p").css("color", TEXTCOLOR[c % 3])
-				$("small").css("color", TEXTCOLOR[c % 3])
+			document.getElementsByTagName("h1")[0].onclick = function () {
+				document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 3]
+				document.getElementsByTagName("small")[0].style.color = TEXTCOLOR[c % 3]
+				let x = document.getElementsByTagName("p")
+				for (let i=0;i<x.length;i++){
+					x[i].style.color = TEXTCOLOR[c % 3]
+				}
 				c++
-			})
-		})
+			}
+		}
 	</script>
 	<a href="#mmmmm" class="down">⬇️</a>
 	<strong><br>自我介绍：</strong>
 	<img src="邢栋头像" height="450" width="230">
-	<p id="mm">大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
-	<a href="https://xclala.gitee.io/clock"><strong id="nowspan"></strong><br></a>
-	<small id="mmmm"><br>使用电脑最新稳定版chrome效果更佳。<br></small>
+	<p>大家好，我是邢栋！我喜欢编程，我基本上是自学的。请大家多多关照😊 我编了一些网页，上面是我认为比较好的作品的链接，和别的琐碎的东西：<br></p>
+	<a href="./clock"><strong id="nowspan"></strong><br></a>
+	<small><br>使用电脑最新稳定版chrome效果更佳。<br></small>
 	<a class="up" href="#menu">⬆️<br></a>
 	<p id="mmmmm">下面是自由编辑区(刷新网页会消失自由编辑区内所有文字)</p>
 	<hr>

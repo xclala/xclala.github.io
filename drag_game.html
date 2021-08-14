@@ -113,7 +113,6 @@
             ondragleave 应用于目标元素，当鼠标离开目标元素时调用
         */
 
-        // var obj = null; /* 当前被拖拽的值*/
 
         document.ondragstart = function (e) {
             /*通过dataTransfer来实现数据的存储与获取
@@ -121,10 +120,8 @@
                 format: 数据的类型： text/html  text/uri-list
                 Data: 数据： 一般来说是字符串值
             */
-            // e.dataTransfer.setData("Text", e.target.id);
             e.target.style.opacity = 0.5
             e.dataTransfer.setData("text", e.target.id);
-            console.log(e.target.id)
         }
 
         document.ondragend = function (e) {
@@ -138,7 +135,7 @@
 
         document.ondrop = function (e) {
             /*通过e.dataTransfer.setData存储的数据，只能在drop事件中获取*/
-            var data = e.dataTransfer.getData("text");
+            let data = e.dataTransfer.getData("text");
             e.target.appendChild(document.getElementById(data));
         }
     </script>
