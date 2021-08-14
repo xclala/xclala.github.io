@@ -10,7 +10,7 @@
 </head>
 <script src="./clock/getnow.js"></script>
 
-<body ontouchstart>
+<body onload="getnow()" ontouchstart>
 	<style>
 		html {
 			-moz-osx-font-smoothing: grayscale;
@@ -254,23 +254,6 @@
 		</ul>
 	</div>
 	<h1>邢栋的个人网页</h1>
-	<script>
-		window.onload = function () {
-			const BACKGROUNDCOLOR = ['#111114', 'whitesmoke', '#E9FDFF']
-			const TEXTCOLOR = ['white', 'black', 'black']
-			let c = 0
-			document.getElementsByTagName("h1")[0].onclick = function () {
-				document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 3]
-				document.getElementsByTagName("small")[0].style.color = TEXTCOLOR[c % 3]
-				let x = document.getElementsByTagName("p")
-				for (let i=0;i<x.length;i++){
-					x[i].style.color = TEXTCOLOR[c % 3]
-				}
-				c++
-			}
-		}
-		getnow()
-	</script>
 	<a href="#mmmmm" class="down">⬇️</a>
 	<strong><br>自我介绍：</strong>
 	<img src="邢栋头像" height="450" width="230">
@@ -279,6 +262,20 @@
 	<small><br>使用电脑最新稳定版chrome效果更佳。<br></small>
 	<a class="up" href="#menu">⬆️<br></a>
 	<p id="mmmmm">下面是自由编辑区(刷新网页会消失自由编辑区内所有文字)</p>
+	<script>
+		const BACKGROUNDCOLOR = ['#111114', 'whitesmoke', '#E9FDFF']
+		const TEXTCOLOR = ['white', 'black', 'black']
+		let c = 0
+		document.getElementsByTagName("h1")[0].onclick = function () {
+			document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 3]
+			document.getElementsByTagName("small")[0].style.color = TEXTCOLOR[c % 3]
+			let x = document.getElementsByTagName("p")
+			for (let i = 0; i < x.length; i++) {
+				x[i].style.color = TEXTCOLOR[c % 3]
+			}
+			c++
+		}
+	</script>
 	<hr>
 	<div contenteditable="true">
 		<strong>在这里编辑！！！</strong>
