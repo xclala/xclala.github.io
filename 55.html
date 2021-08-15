@@ -6,17 +6,16 @@
     <title>分数公式</title>
 </head>
 
-<body>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<body ontouchstart>
     <script>
-        $(document).ready(function () {
+        window.onload = function () {
             const BACKGROUNDCOLOR = ['#111114', 'whitesmoke', '#E9FDFF']
             let c = 0
-            $("h1").click(function () {
-                $("body").css("background", BACKGROUNDCOLOR[c % 3])
+            document.getElementsByTagName("h1")[0].onclick = function () {
+                document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 3]
                 c++
-            })
-        })
+            }
+        }
     </script>
     <style>
         html {
