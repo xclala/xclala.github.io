@@ -27,6 +27,10 @@
 			small {
 				color: white;
 			}
+
+			a {
+				color: orange;
+			}
 		}
 
 		@media(prefers-color-scheme:light) {
@@ -37,6 +41,10 @@
 			p,
 			small {
 				color: black;
+			}
+
+			a {
+				color: blue;
 			}
 		}
 
@@ -270,6 +278,7 @@
 	<script>
 		const BACKGROUNDCOLOR = ['#111114', 'whitesmoke', '#E9FDFF']
 		const TEXTCOLOR = ['white', 'black', 'black']
+		const LINKCOLOR = ['orange', 'blue', 'blue']
 		let c = 0
 		document.getElementsByTagName("h1")[0].onclick = function () {
 			document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 3]
@@ -277,6 +286,10 @@
 			let x = document.getElementsByTagName("p")
 			for (let i = 0; i < x.length; i++) {
 				x[i].style.color = TEXTCOLOR[c % 3]
+			}
+			let xx = document.getElementsByTagName("a")
+			for (let i = 0; i < xx.length; i++) {
+				xx[i].style.color = LINKCOLOR[c % 3]
 			}
 			c++
 		}
