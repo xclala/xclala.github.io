@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="content"></canvas>
+</body>
+<script>
+  const cav = document.getElementById('content');
+  cav.height = window.document.body.offsetHeight;
+  cav.width = window.document.body.offsetWidth;
+  const w = cav.width = window.innerWidth;
+  const h = cav.height = window.innerHeight;
+  let yPositions = Array(300);
+  yPositions.fill(0);
+  const ctx = cav.getContext('2d');
+  function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = 'green';
+    ctx.font = '10pt';
+    yPositions.map(function (y, index) { //y当前值，index为当前值的下标
+      const text = String.fromCharCode(1e2 + Math.random() * 330); //生成随机字母
+      const x = index * 10;
+      cav.getContext('2d').fillText(text, x, y);
+      if (y > Math.random() * 1e4) {
+        yPositions[index] = 0;
+      } else {
+        yPositions[index] = y + 10;
+      }
+    });
+  }
+  setInterval('draw()', 30);
+</script>
+
+</html>
