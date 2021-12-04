@@ -8,8 +8,24 @@
 
 <body>
     <h1>三个小笑话</h1>
+    <script>
+        const BACKGROUNDCOLOR = ['#111114', 'whitesmoke']
+        const TEXTCOLOR = ['white', 'black']
+        let a = 0
+        document.getElementsByTagName("h1")[0].onclick = function () {
+            document.body.style.backgroundColor = BACKGROUNDCOLOR[a % 2]
+            document.getElementById("k1").style.color = TEXTCOLOR[a % 2]
+            document.getElementById("k2").style.color = TEXTCOLOR[a % 2]
+            document.getElementById("k3").style.color = TEXTCOLOR[a % 2]
+            document.getElementById("q1").style.color = TEXTCOLOR[a % 2]
+            document.getElementById("q2").style.color = TEXTCOLOR[a % 2]
+            document.getElementById("q3").style.color = TEXTCOLOR[a % 2]
+            document.getElementsByTagName("h1")[0].style.color = TEXTCOLOR[a % 2]
+            a++
+        }
+    </script>
     <div>
-        <h2>当你把一个雪人和一个吸血鬼放在一起的时候，你会得到什么?</h2>
+        <h2 id="q1">当你把一个雪人和一个吸血鬼放在一起的时候，你会得到什么?</h2>
         <p id="k1">冻疮!<br></p>
         <script>
             function key1() {
@@ -19,7 +35,7 @@
         <button onclick="key1()">答案</button>
     </div>
     <div>
-        <h2>牙医把宇航员的蛀牙叫什么?</h2>
+        <h2 id="q2">牙医把宇航员的蛀牙叫什么?</h2>
         <p id="k2">一个黑洞！<br></p>
         <script>
             function key2() {
@@ -29,7 +45,7 @@
         <button onclick="key2()">答案</button>
     </div>
     <div>
-        <h2>有敲门声。是谁？</h2>
+        <h2 id="q3">有敲门声。是谁？</h2>
         <p id="k3">牛的叫声。<br></p>
         <script>
             function key3() {
@@ -45,6 +61,30 @@
 
         h1 {
             text-align: center;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: #111114;
+            }
+
+            p,
+            h1,
+            h2 {
+                color: white;
+            }
+        }
+
+        @media(prefers-color-scheme:white) {
+            body {
+                background-color: whitesmoke;
+            }
+
+            p,
+            h1,
+            h2 {
+                color: black;
+            }
         }
     </style>
 </body>
