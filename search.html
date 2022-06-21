@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="author" content="邢栋">
+</head>
+
+<body>
+    <a href="https://github.com/xclala/search">
+        <img src="../github.svg">
+    </a>
+    <h1>搜索</h1>
+    <a href="..">🔙<br></a>
+    <p></p>
+    <a href="qrcode.png">二维码</a>
+    <script>
+        function baidu() {
+            window.open("https://www.baidu.com/s?wd=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function bing() {
+            window.open("https://cn.bing.com/search?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function ecosia() {
+            window.open("https://www.ecosia.org/search?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function sogo() {
+            window.open("https://www.sogou.com/web?query=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function search_360() {
+            window.open("https://www.so.com/s?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function zhihu() {
+            window.open("https://www.zhihu.com/search?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function bilibili() {
+            window.open("https://search.bilibili.com/all?keyword=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function github() {
+            window.open("https://github.com/search?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
+        function baidu_baike() {
+            window.open("https://baike.baidu.com/item/" + encodeURI(document.forms["form"]["text"].value))
+        }
+    </script>
+    <form align="center" name="form">
+    	<input type="reset" value="清空">
+        <input type="text" autofocus="true" name="text">
+        <input type="button" onclick="baidu()" value="百度">
+        <input type="button" onclick="bing()" value="Bing">
+        <input type="button" onclick="ecosia()" value="ecosia">
+        <input type="button" onclick="sogo()" value="搜狗">
+        <input type="button" onclick="search_360()" value="360">
+        <input type="button" onclick="baidu_baike()" value="百度百科">
+        <input type="button" onclick="zhihu()" value="知乎">
+        <input type="button" onclick="bilibili()" value="哔哩哔哩">
+        <input type="button" onclick="github()" value="github">
+    </form>
+    <style>
+        html {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: rgb(35, 35, 35);
+            }
+
+            h1 {
+                color: orangered;
+            }
+        }
+
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: wheat;
+            }
+
+            h1 {
+                color: black;
+            }
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            font-weight: bolder;
+        }
+
+        input {
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        const BACKGROUNDCOLOR = ['rgb(35, 35, 35)', 'wheat']
+        const TITLECOLOR = ['orangered', 'black']
+        let a = 0
+        document.getElementsByTagName("h1")[0].onclick = function () {
+            document.body.style.backgroundColor = BACKGROUNDCOLOR[a % 2]
+            document.getElementsByTagName("h1")[0].style.color = TITLECOLOR[a % 2]
+            a++
+        }
+    </script>
+</body>

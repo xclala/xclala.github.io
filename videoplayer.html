@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="视频播放器">
+    <meta name="author" content="邢栋">
+    <title>视频播放器</title>
+    <link rel="icon" type="image/x-ico" href="../favicon.ico">
+</head>
+
+<body>
+    <a href="https://github.com/xclala/videoplayer">
+        <img src="../github.svg">
+    </a>
+    <div align="center">
+        <h1>视频播放器</h1>
+        <form name="videoname">
+            <button type="reset">清空</button>
+            <input type="url" name="videoname" placeholder="请输入视频链接">
+            <button type="button" onclick="displayVideo()">播放</button>
+        </form>
+        <script>
+            function displayVideo() {
+                document.getElementById("video").src = document.forms["videoname"]["videoname"].value
+            }
+        </script>
+        <video src="" autoplay="autoplay" controls="controls" id="video"></video>
+    </div>
+    <style>
+        html {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: black;
+            }
+
+            h1 {
+                color: white;
+            }
+        }
+
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: white;
+            }
+
+            h1 {
+                color: black;
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const BACKGROUNDCOLOR = ['black', 'white']
+            const TITLECOLOR = ['white', 'black']
+            let c = 0
+            document.getElementsByTagName("h1")[0].onclick = function () {
+                document.body.style.backgroundColor = BACKGROUNDCOLOR[c % 2]
+                document.getElementsByTagName("h1")[0].style.color = TITLECOLOR[c % 2]
+                c++
+            }
+        }
+    </script>
+    <p></p>
+    <a href="..">🔙<br></a>
+    <p></p>
+    <a href="qrcode.png">二维码<br></a>
+</body>
