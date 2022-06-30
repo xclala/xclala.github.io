@@ -60,6 +60,11 @@
             window.open("https://baike.baidu.com/item/" + encodeURI(document.forms["form"]["text"].value))
         }
 
+        function gitee() {
+            setCookie("search", document.forms["form"]["text"].value, 365)
+            window.open("https://search.gitee.com/?q=" + encodeURI(document.forms["form"]["text"].value))
+        }
+
         function setCookie(cname, cvalue, exdays) {
             let d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -95,6 +100,7 @@
         <input type="button" onclick="zhihu()" value="知乎">
         <input type="button" onclick="bilibili()" value="哔哩哔哩">
         <input type="button" onclick="github()" value="github">
+        <input type="button" onclick="gitee()" value="gitee">
     </form>
     <style>
         html {
