@@ -4,7 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>旋转太极图</title>
-    <style type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <style>
         html {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
@@ -26,14 +31,12 @@
                 let i = 1;
 
                 function fillTaiji() {
-                    var c = document.getElementById("myCanvas");
-                    var ctx = c.getContext("2d");
+                    let c = document.getElementById("myCanvas");
+                    let ctx = c.getContext("2d");
                     ctx.clearRect(0, 0, 600, 400);
                     // 此处保存原始坐标
                     ctx.save();
                     ctx.translate(300, 200);
-                    // var time = new Date();
-                    // ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() )
                     ctx.rotate(((2 * Math.PI) * v) * i++);
                     if (i === 36000) {
                         i = 1;
